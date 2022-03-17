@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Apache License version 2.0"
+
+[[mods]]
+modId="hpexpansion"
+version="1.0.0"
+displayName="hpExpansion"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="AQUA, MCreator"
+description='''
+This mod simply controls the player's health limit as much as possible.
+'''
+
+[[dependencies.hpexpansion]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

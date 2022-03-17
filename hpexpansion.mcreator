@@ -1,0 +1,112 @@
+{
+  "mod_elements": [
+    {
+      "name": "HealthupheartOnRightClick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "healthupheart_on_right_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Healthupheart",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healthupheart"
+    },
+    {
+      "name": "QuaterHealthupheart",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quater_healthupheart"
+    },
+    {
+      "name": "HealthupheartRecipi",
+      "type": "recipe",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healthupheart_recipi"
+    },
+    {
+      "name": "NoHeart",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_heart"
+    },
+    {
+      "name": "Lifeingpt",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifeingot"
+    },
+    {
+      "name": "Lifeingotrecepi",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifeingotrecepi"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.hpexpansion.lifeingot": "Life Ingot",
+      "item.hpexpansion.quater_healthupheart": "Quater Healthupheart",
+      "item.hpexpansion.healthupheart": "Healthupheart",
+      "item.hpexpansion.no_heart": "No Heart"
+    },
+    "ja_jp": {
+      "item.hpexpansion.lifeingot": "Lifeingpt",
+      "item.hpexpansion.quater_healthupheart": "壊れたハートのかけら",
+      "item.hpexpansion.healthupheart": "ハートのかけら",
+      "item.hpexpansion.no_heart": "空のハート"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "hpexpansion",
+    "modName": "hpExpansion",
+    "version": "1.0.0",
+    "description": "This mod simply controls the player\u0027s health limit as much as possible.",
+    "author": "AQUA, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Apache License version 2.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": true,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "jp.aquasword.hpexpansion",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}
