@@ -90,6 +90,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "quarter_hp_heart_recipe"
+    },
+    {
+      "name": "Villagearmorerhpexpansion",
+      "type": "loottable",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villagearmorerhpexpansion"
     }
   ],
   "variable_elements": [],
