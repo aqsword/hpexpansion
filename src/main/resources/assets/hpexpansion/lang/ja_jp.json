@@ -1,6 +1,6 @@
 {
-  "item.hpexpansion.life_ingot": "Life Ingot",
-  "item.hpexpansion.empty_hp_heart": "Empty Hp Heart",
-  "item.hpexpansion.h_pheart": "H Pheart",
-  "item.hpexpansion.quarter_hp_heart": "Quarter HP Heart"
+  "item.hpexpansion.life_ingot": "ライフインゴット",
+  "item.hpexpansion.empty_hp_heart": "空のハート",
+  "item.hpexpansion.h_pheart": "HPハート",
+  "item.hpexpansion.quarter_hp_heart": "壊れたハートのかけら"
 }
