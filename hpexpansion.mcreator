@@ -1,88 +1,111 @@
 {
   "mod_elements": [
     {
-      "name": "HealthupheartOnRightClick",
+      "name": "HPheartOnRightClick",
       "type": "procedure",
       "sortid": 1,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "healthupheart_on_right_click",
+      "locked_code": false,
+      "registry_name": "h_pheart_on_right_click",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
-      "name": "Healthupheart",
+      "name": "HPheart",
       "type": "item",
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "healthupheart"
+      "registry_name": "h_pheart"
     },
     {
-      "name": "QuaterHealthupheart",
+      "name": "QuarterHPHeart",
       "type": "item",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "quater_healthupheart"
+      "registry_name": "quarter_hp_heart"
     },
     {
-      "name": "HealthupheartRecipi",
-      "type": "recipe",
+      "name": "EmptyHpHeart",
+      "type": "item",
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "healthupheart_recipi"
+      "registry_name": "empty_hp_heart"
     },
     {
-      "name": "NoHeart",
+      "name": "LifeIngot",
       "type": "item",
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "no_heart"
+      "registry_name": "life_ingot"
     },
     {
-      "name": "Lifeingpt",
-      "type": "item",
+      "name": "HPHeartRecipe",
+      "type": "recipe",
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "lifeingot"
+      "registry_name": "hp_heart_recipe"
     },
     {
-      "name": "Lifeingotrecepi",
+      "name": "LifeIngotRecipe",
       "type": "recipe",
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "lifeingotrecepi"
+      "registry_name": "life_ingot_recipe"
+    },
+    {
+      "name": "LifeIngotRecipe2",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_ingot_recipe_2"
+    },
+    {
+      "name": "LifeIngotRecipe3",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_ingot_recipe_3"
+    },
+    {
+      "name": "EmptyHpHeartRecipe",
+      "type": "recipe",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_hp_heart_recipe"
+    },
+    {
+      "name": "QuarterHpHeartRecipe",
+      "type": "recipe",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quarter_hp_heart_recipe"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.hpexpansion.lifeingot": "Life Ingot",
-      "item.hpexpansion.quater_healthupheart": "Quater Healthupheart",
-      "item.hpexpansion.healthupheart": "Healthupheart",
-      "item.hpexpansion.no_heart": "No Heart"
+      "item.hpexpansion.life_ingot": "Life Ingot",
+      "item.hpexpansion.empty_hp_heart": "Empty HP Heart",
+      "item.hpexpansion.h_pheart": "HP Heart",
+      "item.hpexpansion.quarter_hp_heart": "Quarter HP Heart"
     },
     "ja_jp": {
-      "item.hpexpansion.lifeingot": "Lifeingpt",
-      "item.hpexpansion.quater_healthupheart": "壊れたハートのかけら",
-      "item.hpexpansion.healthupheart": "ハートのかけら",
-      "item.hpexpansion.no_heart": "空のハート"
+      "item.hpexpansion.life_ingot": "ライフインゴット",
+      "item.hpexpansion.empty_hp_heart": "空のハート",
+      "item.hpexpansion.h_pheart": "HPハート",
+      "item.hpexpansion.quarter_hp_heart": "壊れたハートのかけら"
     }
   },
   "foldersRoot": {

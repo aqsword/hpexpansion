@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "hpexpansion:quarter_hp_heart"
+    },
+    "1": {
+      "item": "hpexpansion:quarter_hp_heart"
+    },
+    "2": {
+      "item": "hpexpansion:quarter_hp_heart"
+    },
+    "3": {
+      "item": "hpexpansion:quarter_hp_heart"
+    }
+  },
+  "result": {
+    "item": "hpexpansion:h_pheart",
+    "count": 1
+  }
+}
