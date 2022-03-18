@@ -5,11 +5,11 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:netherite_scrap"
+      "item": "minecraft:enchanted_golden_apple"
     }
   },
   "result": {
-    "item": "hpexpansion:empty_hp_heart",
+    "item": "hpexpansion:h_pheart",
     "count": 1
   }
 }

@@ -98,6 +98,22 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "villagearmorerhpexpansion"
+    },
+    {
+      "name": "HPHeartRecipe2",
+      "type": "recipe",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hp_heart_recipe_2"
+    },
+    {
+      "name": "EmptyHpHeartRecipe2",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_hp_heart_recipe_2"
     }
   ],
   "variable_elements": [],

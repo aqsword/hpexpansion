@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": "Items.NETHERITE_SCRAP"
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       },
       {
-        "value": ""
+        "value": "Blocks.EMERALD_BLOCK"
       }
     ],
     "recipeReturnStack": {
       "value": "CUSTOM:EmptyHpHeart"
     },
-    "name": "empty_hp_heart_recipe",
+    "name": "empty_hp_heart_recipe_2",
     "namespace": "mod"
   }
 }

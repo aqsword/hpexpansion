@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "Items.NETHERITE_SCRAP"
+        "value": "Items.GOLDEN_APPLE#1"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:EmptyHpHeart"
+      "value": "CUSTOM:HPheart"
     },
-    "name": "empty_hp_heart_recipe",
+    "name": "hp_heart_recipe_2",
     "namespace": "mod"
   }
 }
