@@ -226,6 +226,86 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "villagesnowyhousehpexpansion"
+    },
+    {
+      "name": "Villagetaigahousehpexpansion",
+      "type": "loottable",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villagetaigahousehpexpansion"
+    },
+    {
+      "name": "Abandonedmineshafthpexpansion",
+      "type": "loottable",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abandonedmineshafthpexpansion"
+    },
+    {
+      "name": "Desertpyramidhpexpansion",
+      "type": "loottable",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desertpyramidhpexpansion"
+    },
+    {
+      "name": "Endcitytreasurehpexpansion",
+      "type": "loottable",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endcitytreasurehpexpansion"
+    },
+    {
+      "name": "Netherbridgehpexpansion",
+      "type": "loottable",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherbridgehpexpansion"
+    },
+    {
+      "name": "Ruinedportalhpexpansion",
+      "type": "loottable",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruinedportalhpexpansion"
+    },
+    {
+      "name": "Simpledungeonhpexpansion",
+      "type": "loottable",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simpledungeonhpexpansion"
+    },
+    {
+      "name": "Underwaterruinbighpexpansion",
+      "type": "loottable",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "underwaterruinbighpexpansion"
+    },
+    {
+      "name": "Underwaterruinsmallhpexpansion",
+      "type": "loottable",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "underwaterruinsmallhpexpansion"
+    },
+    {
+      "name": "Woodlandmansionhpexpansion",
+      "type": "loottable",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "woodlandmansionhpexpansion"
     }
   ],
   "variable_elements": [],
