@@ -1,5 +1,6 @@
 package jp.aquasword.hpexpansion.procedures;
 
+import jp.aquasword.hpexpansion.HpexpansionMod;
 import jp.aquasword.hpexpansion.data.HpexpansionConfig;
 import jp.aquasword.hpexpansion.data.PlayerData;
 import jp.aquasword.hpexpansion.utils.ConfigLoads;
@@ -8,26 +9,28 @@ import jp.aquasword.hpexpansion.utils.PlayerDataUtils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 public class PlayerLoginProcedures {
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
-		public static void init(PlayerLoggedInEvent event) {
+		public static void init(PlayerEvent.PlayerLoggedInEvent event) {
 			onLogin(event);
 		}
 	}
 
-	public static void onLogin(PlayerLoggedInEvent event) {
+	public static void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
 		PlayerEntity player = event.getPlayer();
-		if(!player.world.isRemote) {
+		HpexpansionMod.LOGGER.info("player " + player.getName().getString() + " onLoad start...");
+		if (player.world.isRemote) {
 			return;
 		}
 
 		PlayerData data = PlayerDataUtils.read(player.getUniqueID().toString());
+		data.setName(player.getName().getString());
 		HpexpansionConfig config = ConfigLoads.load();
 
 		int maxHealth = HelthCalcUtils.calc(config, data.getCount());
@@ -45,5 +48,8 @@ public class PlayerLoginProcedures {
 		LivingEntity lEntity = (LivingEntity) player;
 		lEntity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
 		lEntity.setHealth(lEntity.getHealth());
+
+		PlayerDataUtils.save(player.getUniqueID().toString(), data);
+		HpexpansionMod.LOGGER.info("player " + player.getName().getString() + " onLoad finish...");
 	}
 }

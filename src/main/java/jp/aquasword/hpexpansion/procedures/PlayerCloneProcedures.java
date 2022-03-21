@@ -8,22 +8,22 @@ import jp.aquasword.hpexpansion.utils.PlayerDataUtils;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraftforge.event.entity.player.PlayerEvent.Clone;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 public class PlayerCloneProcedures {
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
-		public static void init(Clone event) {
+		public static void init(PlayerEvent.Clone event) {
 			onClone(event);
 		}
 	}
 
-	public static void onClone(Clone event) {
+	public static void onClone(PlayerEvent.Clone event) {
 		PlayerEntity player = event.getPlayer();
-		if (!player.world.isRemote) {
+		if (player.world.isRemote) {
 			return;
 		}
 		if (!event.isWasDeath()) {
@@ -31,6 +31,7 @@ public class PlayerCloneProcedures {
 		}
 
 		PlayerData data = PlayerDataUtils.read(player.getUniqueID().toString());
+		data.setName(player.getName().getString());
 		HpexpansionConfig config = ConfigLoads.load();
 
 		int maxHealth = HelthCalcUtils.calc(config, data.getCount() - 1);
@@ -46,5 +47,7 @@ public class PlayerCloneProcedures {
 		LivingEntity lEntity = (LivingEntity) player;
 		lEntity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
 		lEntity.setHealth((float) lEntity.getAttribute(Attributes.MAX_HEALTH).getBaseValue());
+
+		PlayerDataUtils.save(player.getUniqueID().toString(), data);
 	}
 }

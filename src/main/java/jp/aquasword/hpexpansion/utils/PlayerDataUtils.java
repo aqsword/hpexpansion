@@ -38,7 +38,7 @@ public class PlayerDataUtils {
 		File file = filePath(uuid);
 
 		try (FileWriter writer = new FileWriter(file)) {
-			writer.write(new Gson().toJson(file));
+			writer.write(new Gson().toJson(data));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -59,8 +59,7 @@ public class PlayerDataUtils {
 	private static File filePath(String uuid) {
 		String worldName = ServerPropertiesReadings.worldName();
 		File file = new File(FMLPaths.GAMEDIR.get().toString(),
-				File.separator + worldName + File.separator
-						+ "hpexpansion" + File.separator + uuid + ".json");
+				"/" + worldName + "/data/hpexpansion/" + uuid + ".json");
 		return file;
 	}
 

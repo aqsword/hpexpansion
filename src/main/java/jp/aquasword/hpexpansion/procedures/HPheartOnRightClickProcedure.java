@@ -12,17 +12,19 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.ActionResultType;
 
 public class HPheartOnRightClickProcedure {
-	public static void executeProcedure(Map<String, Object> dependencies) {
+	public static ActionResultType executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
 				HpexpansionMod.LOGGER.warn("Failed to load dependency entity for HPheartOnRightClickProcedure...");
-			return;
+			return ActionResultType.FAIL;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if(!entity.world.isRemote) {
-			return;
+		if(entity.world.isRemote) {
+			HpexpansionMod.LOGGER.info("player.world.isRemote:" + entity.world.isRemote);
+			return ActionResultType.PASS;
 		}
 		PlayerEntity player = (PlayerEntity) entity;
 
@@ -35,6 +37,7 @@ public class HPheartOnRightClickProcedure {
 		// 最大以上だったら下げる
 		if (maxHealth > config.getMaxHealth()) {
 			maxHealth = config.getMaxHealth();
+			return ActionResultType.PASS;
 		} else {
 			data.setCount(data.getCount() + 1);
 		}
@@ -43,5 +46,9 @@ public class HPheartOnRightClickProcedure {
 		LivingEntity lEntity = (LivingEntity) player;
 		lEntity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(maxHealth);
 		lEntity.setHealth((float) lEntity.getAttribute(Attributes.MAX_HEALTH).getBaseValue());
+
+		PlayerDataUtils.save(player.getUniqueID().toString(), data);
+
+		return ActionResultType.SUCCESS;
 	}
 }

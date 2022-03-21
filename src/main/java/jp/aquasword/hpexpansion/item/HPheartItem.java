@@ -1,22 +1,24 @@
 
 package jp.aquasword.hpexpansion.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import java.util.AbstractMap;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Stream;
 
-import net.minecraft.world.World;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ActionResult;
-import net.minecraft.item.Rarity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.block.BlockState;
-
-import jp.aquasword.hpexpansion.procedures.HPheartOnRightClickProcedure;
 import jp.aquasword.hpexpansion.HpexpansionModElements;
-
-import java.util.Collections;
+import jp.aquasword.hpexpansion.procedures.HPheartOnRightClickProcedure;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Rarity;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
+import net.minecraft.world.World;
+import net.minecraftforge.registries.ObjectHolder;
 
 @HpexpansionModElements.ModElement.Tag
 public class HPheartItem extends HpexpansionModElements.ModElement {
@@ -57,11 +59,15 @@ public class HPheartItem extends HpexpansionModElements.ModElement {
 		public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 			ItemStack itemstack = ar.getResult();
-			double x = entity.getPosX();
-			double y = entity.getPosY();
-			double z = entity.getPosZ();
 
-			HPheartOnRightClickProcedure.executeProcedure(Collections.EMPTY_MAP);
+			ActionResultType resultType = HPheartOnRightClickProcedure.executeProcedure(
+					Stream.of(new AbstractMap.SimpleEntry<>("entity", entity)).collect(HashMap::new,
+							(_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+
+			if (resultType == ActionResultType.SUCCESS) {
+				itemstack.setCount(itemstack.getCount() - 1);
+			}
+
 			return ar;
 		}
 	}
